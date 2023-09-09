@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="SelectContactTableCell" customModule="PhoneBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="o12-0m-Hud">
+                        <rect key="frame" x="15" y="10" width="290" height="63"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-S8-dkm">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="63"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-qA-RnB">
+                                        <rect key="frame" x="0.0" y="16.666666666666668" width="30" height="30.000000000000004"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Czg-LG-qcS"/>
+                                            <constraint firstAttribute="width" constant="30" id="dgm-Pe-aRs"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ht5-qA-RnB" firstAttribute="centerY" secondItem="Ofc-S8-dkm" secondAttribute="centerY" id="7M4-21-yKZ"/>
+                                    <constraint firstItem="ht5-qA-RnB" firstAttribute="leading" secondItem="Ofc-S8-dkm" secondAttribute="leading" id="GQu-SR-EfX"/>
+                                    <constraint firstAttribute="trailing" secondItem="ht5-qA-RnB" secondAttribute="trailing" id="I3q-qv-BKH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yf-AN-9cw" customClass="ContactView" customModule="PhoneBook" customModuleProvider="target">
+                                <rect key="frame" x="45" y="0.0" width="245" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="o12-0m-Hud" secondAttribute="trailing" constant="15" id="9rA-hG-tm0"/>
+                    <constraint firstItem="o12-0m-Hud" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HfE-yJ-UNt"/>
+                    <constraint firstItem="o12-0m-Hud" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="P9e-Wa-Yfj"/>
+                    <constraint firstAttribute="bottom" secondItem="o12-0m-Hud" secondAttribute="bottom" constant="10" id="uS9-4T-BnM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkBoxImageView" destination="ht5-qA-RnB" id="K1n-C7-GFc"/>
+                <outlet property="contactView" destination="9yf-AN-9cw" id="3aj-AB-oSt"/>
+            </connections>
+            <point key="canvasLocation" x="129.7709923664122" y="2.4647887323943665"/>
+        </tableViewCell>
+    </objects>
+</document>
